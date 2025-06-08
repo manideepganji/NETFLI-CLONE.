@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #141414;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo {
+  height: 30px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  font-size: 14px;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.profile-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Hero */
+.hero {
+  height: 80vh;
+  background: linear-gradient(to top, #141414, transparent),
+    url("https://wallpapercave.com/wp/wp4056410.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  padding-left: 60px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  max-width: 400px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #e5e5e5;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-right: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.play {
+  background-color: white;
+  color: black;
+}
+
+.info {
+  background-color: rgba(109, 109, 110, 0.7);
+  color: white;
+}
+
+/* Movie Row */
+.movie-section {
+  padding: 20px 60px;
+}
+
+.movie-section h2 {
+  margin-bottom: 10px;
+}
+
+.movie-row {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+}
+
+.movie-row img {
+  width: 200px;
+  height: 120px;
+  border-radius: 6px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.movie-row img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .movie-row img {
+    width: 140px;
+    height: 90px;
+  }
+}
